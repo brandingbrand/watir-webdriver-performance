@@ -43,13 +43,13 @@ module Watir
         hash[:timing][:request_start] if hash[:timing][:request_start] > 0
       hash[:summary][:response] = hash[:timing][:response_end] -
         hash[:timing][:response_start] if hash[:timing][:response_start] > 0
-      hash[:summary][:dom_processing] = hash[:timing][:dom_content_loaded_event_start] -
-        hash[:timing][:dom_loading] if hash[:timing][:dom_loading] > 0
-      hash[:summary][:time_to_first_byte] = hash[:timing][:response_start] -
-        hash[:timing][:domain_lookup_start] if hash[:timing][:domain_lookup_start] > 0
-      hash[:summary][:time_to_last_byte] = hash[:timing][:response_end] -
-        hash[:timing][:domain_lookup_start] if hash[:timing][:domain_lookup_start] > 0
-      hash[:summary][:response_time] = latest_timestamp(hash) - earliest_timestamp(hash)
+      hash[:summary][:dom_processing] = (hash[:timing][:dom_content_loaded_event_start] -
+        hash[:timing][:dom_loading]) / 1000 if hash[:timing][:dom_loading] > 0
+      hash[:summary][:time_to_first_byte] = (hash[:timing][:response_start] -
+        hash[:timing][:domain_lookup_start]) / 1000 if hash[:timing][:domain_lookup_start] > 0
+      hash[:summary][:time_to_last_byte] = (hash[:timing][:response_end] -
+        hash[:timing][:domain_lookup_start]) / 1000 if hash[:timing][:domain_lookup_start] > 0
+      hash[:summary][:response_time] = (latest_timestamp(hash) - earliest_timestamp(hash)) / 1000
       OpenStruct.new(hash)
     end
 
