@@ -27,18 +27,18 @@ module Watir
       end
 
       hash[:summary] = {}
-#      hash[:summary][:redirect] = hash[:timing][:redirect_end] -
-#        hash[:timing][:redirect_start] if hash[:timing][:redirect_end] > 0
-#      hash[:summary][:app_cache] = hash[:timing][:domain_lookup_start] -
-#       hash[:timing][:fetch_start] if hash[:timing][:fetch_start] > 0
-#      hash[:summary][:dns] = hash[:timing][:domain_lookup_end] -
-#        hash[:timing][:domain_lookup_start] if hash[:timing][:domain_lookup_start] > 0
-#      hash[:summary][:tcp_connection] = hash[:timing][:connect_end] -
-#        hash[:timing][:connect_start] if hash[:timing][:connect_start] > 0
-#      hash[:summary][:tcp_connection_secure] = hash[:timing][:connect_end] -
-#        hash[:timing][:secure_connection_start] if
-#          ((hash[:timing][:secure_connection_start] != nil) and
-#           (hash[:timing][:secure_connection_start] > 0))
+      hash[:summary][:redirect] = hash[:timing][:redirect_end] -
+        hash[:timing][:redirect_start] if hash[:timing][:redirect_end] > 0
+      hash[:summary][:app_cache] = hash[:timing][:domain_lookup_start] -
+       hash[:timing][:fetch_start] if hash[:timing][:fetch_start] > 0
+      hash[:summary][:dns] = hash[:timing][:domain_lookup_end] -
+        hash[:timing][:domain_lookup_start] if hash[:timing][:domain_lookup_start] > 0
+      hash[:summary][:tcp_connection] = hash[:timing][:connect_end] -
+        hash[:timing][:connect_start] if hash[:timing][:connect_start] > 0
+      hash[:summary][:tcp_connection_secure] = hash[:timing][:connect_end] -
+        hash[:timing][:secure_connection_start] if
+          ((hash[:timing][:secure_connection_start] != nil) and
+           (hash[:timing][:secure_connection_start] > 0))
       hash[:summary][:request] = hash[:timing][:response_start] -
         hash[:timing][:request_start] if hash[:timing][:request_start] > 0
       hash[:summary][:response] = hash[:timing][:response_end] -
