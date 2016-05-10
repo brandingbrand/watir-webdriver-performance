@@ -51,6 +51,9 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<zomg>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, [">= 0"])
+      s.add_runtime_dependency(%q<watir-webdriver>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<zomg>, [">= 0"])
       s.add_development_dependency(%q<nokogiri>, [">= 0"])
       s.add_development_dependency(%q<active_support>, [">= 0"])
     else
@@ -60,6 +63,9 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<zomg>, [">= 0"])
       s.add_dependency(%q<rdoc>, [">= 0"])
+      s.add_dependency(%q<watir-webdriver>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<zomg>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
       s.add_dependency(%q<active_support>, [">= 0"])
     end
@@ -70,6 +76,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<zomg>, [">= 0"])
     s.add_dependency(%q<rdoc>, [">= 0"])
+    s.add_dependency(%q<watir-webdriver>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<zomg>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
     s.add_dependency(%q<active_support>, [">= 0"])
   end
