@@ -18,17 +18,14 @@ Gem::Specification.new do |s|
    ]
    s.files = [
      ".document",
-     ".rbenv-version",
      ".rspec",
      "Gemfile",
-     "Gemfile.lock",
      "LICENSE.txt",
      "README.rdoc",
      "Rakefile",
      "VERSION",
      "examples/basic.rb",
      "lib/idl_extractor.rb",
-     "lib/performance.rb",
      "lib/watir-webdriver-performance.rb",
      "spec/spec_helper.rb",
      "spec/watir-webdriver-performance-non-supported-browser_spec.rb",
